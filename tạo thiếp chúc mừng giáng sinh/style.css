@@ -1,0 +1,42 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	max-width:1000px;
+	font-family: 'Lobster', cursive;
+	color:#ef4009;
+	position:relative;
+}
+.background img{
+	width:1000px;
+}
+.loichuc{
+	position:absolute;
+	top:264px;
+	left:156px;
+	transform: rotateZ(-10deg);
+	font-size:23px;
+	animation: doimau 5s linear infinite;
+}
+@keyframes doimau {
+    0%  { color: #EF7126;}
+    25%  { color: #6F3662;}
+    50%  { color: #9F6164;}
+    75%  { color: #44B3C2;}
+    100% { color: #218C8D;}
+}
+.santa img{
+	background-color: orange;
+	width:189px;
+	height:95px;
+	position:absolute;
+	top:530px;
+	right:0px;
+	border-radius:50%;
+	animation: santa 7s ease-in-out infinite;
+}
+@keyframes santa{
+	from{ transform:translate(0px); }
+	to{transform:translate(-1000px)}
+}
