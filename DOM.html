@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<div class ="textpara">
+		<p id ="text1" class="a">Lorem ipsum dolor sit amet, </p>
+		<p id ="text2" class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quisquam.</p>
+		<p id ="text3" class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus consectetur eaque laudantium quisquam ullam, tempora!</p>
+	</div>
+	
+
+
+	<script>
+		//Bài 1:
+		// var size = document.getElementsByClassName("a");
+		// function changeSize(x){
+		// 	for(i=0; i<size.length; i++){
+		// 		size[i].style.fontSize = x +"px";
+		// 	}
+		// 	return size
+		// }
+		// 	changeSize(20);
+
+		//  //Bài 2: 
+		// 	function increaseFontSize(para){
+		// 		var newFontSize = document.getElementById(para).style.fontSize;
+		// 		if(parseInt(newFontSize)<=29){
+		// 			newFontSize = (parseInt(newFontSize) + 1 )+"px"
+		// 		}
+		// 		else{return;}
+		// 		return newFontSize;
+		// 	}
+
+		// //Bài 3:
+		
+		// 	function decreaseFontSize(para){
+		// 		var newFontSize1 = document.getElementById(para).style.fontSize;
+		// 		if(parseInt(newFontSize1)<=29){
+		// 			newFontSize1 = (parseInt(newFontSize1) + 1 )+"px"
+		// 		}
+		// 		else{return;}
+		// 		return newFontSize1;
+			// }
+
+
+		//Bài 4:
+		
+		// function changeColor(){
+		// 	document.getElementById("text1").style.color = "blue";
+		// 	document.getElementById("text2").style.color = "yellow";
+		// 	document.getElementById("text3").style.color = "red";
+		// }
+		// changeColor();
+		
+		//Bài 5:
+		
+		// function changeBgColor(color){
+			
+		// 	document.body.style.backgroundColor = color;
+		// }
+		// console.log(changeBgColor("red"));
+		 
+		// Bài 6:
+		
+		// function copy(){
+		// 	var tem1 = document.getElementById("text1").innerText;
+		// 	var tem2 = document.getElementById("text2").innerText;
+		// 	tem2 = tem1;	
+		// 	document.getElementById("text2").innerText = tem2;
+		// }
+
+	</script>
+</body>
+</html>

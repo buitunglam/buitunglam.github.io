@@ -44,7 +44,7 @@
 	opacity: 1;
 }
 
-#author{
+.content #author{
 	animation: tacgia 5s infinite;
 }
 @keyframes tacgia{
