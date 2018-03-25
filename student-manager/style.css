@@ -1,0 +1,96 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: roboto slab;
+}
+.clear{
+	border: 1px solid black;
+	clear:both;
+	width: 30%;
+	margin: auto;
+}
+.container{
+	width: 100%;
+}
+.container-content{
+	width: 85%;
+	margin: auto;
+}
+/*Start title*/
+.container-title{
+	margin-bottom: 10px;
+	width: 100%;
+}
+.container-title p{
+	margin-left: 40%;
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+/*End title*/
+/*Start main content*/
+.main-content{
+	width: 100%;
+	border: 1px solid black;
+}
+/*End main content*/
+/*Start status*/
+.content-status{
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.content-status #button{
+	margin-left: 35%;
+}
+.content-status-item1{
+	margin-bottom: 22px;
+}
+.content-status-item1 span{
+	font-size: 20px;
+	font-weight: bold;
+}
+.content-status-item2 span {
+	padding-left: 50px;
+}
+.content-status-item2 #teacher{
+	padding-left: 0px;
+	padding-right: 125px;
+
+}
+.content-status-item2 .fa{
+	padding-right: 5px;
+}
+/*End Status*/
+/*Start address*/
+.content-address{
+	width: 90%;
+	margin: auto;
+	margin-top: 55px;
+	margin-bottom: 50px;
+	position: relative;
+
+}
+.content-address-item1{
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.content-address-item3{
+	position: absolute;
+	top: 15px;
+	left: 75%;
+}
+/*End address*/
+/*Start list table*/
+.content-list{
+	width: 90%;
+	margin: auto;
+	margin-top: 50px ;
+}
+.content-list h2{
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+/*End list table*/
