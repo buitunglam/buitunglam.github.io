@@ -15,62 +15,62 @@
 
 	<script>
 		//Bài 1:
-		// var size = document.getElementsByClassName("a");
-		// function changeSize(x){
-		// 	for(i=0; i<size.length; i++){
-		// 		size[i].style.fontSize = x +"px";
-		// 	}
-		// 	return size
-		// }
-		// 	changeSize(20);
+		var size = document.getElementsByClassName("a");
+		function changeSize(x){
+			for(i=0; i<size.length; i++){
+				size[i].style.fontSize = x +"px";
+			}
+			return size
+		}
+			changeSize(20);
 
 		//  //Bài 2: 
-		// 	function increaseFontSize(para){
-		// 		var newFontSize = document.getElementById(para).style.fontSize;
-		// 		if(parseInt(newFontSize)<=29){
-		// 			newFontSize = (parseInt(newFontSize) + 1 )+"px"
-		// 		}
-		// 		else{return;}
-		// 		return newFontSize;
-		// 	}
+			function increaseFontSize(para){
+				var newFontSize = document.getElementById(para).style.fontSize;
+				if(parseInt(newFontSize)<=29){
+					newFontSize = (parseInt(newFontSize) + 1 )+"px"
+				}
+				else{return;}
+				return newFontSize;
+			}
 
 		// //Bài 3:
 		
-		// 	function decreaseFontSize(para){
-		// 		var newFontSize1 = document.getElementById(para).style.fontSize;
-		// 		if(parseInt(newFontSize1)<=29){
-		// 			newFontSize1 = (parseInt(newFontSize1) + 1 )+"px"
-		// 		}
-		// 		else{return;}
-		// 		return newFontSize1;
-			// }
+			function decreaseFontSize(para){
+				var newFontSize1 = document.getElementById(para).style.fontSize;
+				if(parseInt(newFontSize1)<=29){
+					newFontSize1 = (parseInt(newFontSize1) + 1 )+"px"
+				}
+				else{return;}
+				return newFontSize1;
+			}
 
 
 		//Bài 4:
 		
-		// function changeColor(){
-		// 	document.getElementById("text1").style.color = "blue";
-		// 	document.getElementById("text2").style.color = "yellow";
-		// 	document.getElementById("text3").style.color = "red";
-		// }
-		// changeColor();
+		function changeColor(){
+			document.getElementById("text1").style.color = "blue";
+			document.getElementById("text2").style.color = "yellow";
+			document.getElementById("text3").style.color = "red";
+		}
+		changeColor();
 		
 		//Bài 5:
 		
-		// function changeBgColor(color){
+		function changeBgColor(color){
 			
-		// 	document.body.style.backgroundColor = color;
-		// }
-		// console.log(changeBgColor("red"));
+			document.body.style.backgroundColor = color;
+		}
+		console.log(changeBgColor("red"));
 		 
 		// Bài 6:
 		
-		// function copy(){
-		// 	var tem1 = document.getElementById("text1").innerText;
-		// 	var tem2 = document.getElementById("text2").innerText;
-		// 	tem2 = tem1;	
-		// 	document.getElementById("text2").innerText = tem2;
-		// }
+		function copy(){
+			var tem1 = document.getElementById("text1").innerText;
+			var tem2 = document.getElementById("text2").innerText;
+			tem2 = tem1;	
+			document.getElementById("text2").innerText = tem2;
+		}
 
 	</script>
 </body>
