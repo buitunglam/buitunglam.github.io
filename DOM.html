@@ -28,20 +28,22 @@
 			function increaseFontSize(para){
 				var newFontSize = document.getElementById(para).style.fontSize;
 				if(parseInt(newFontSize)<=29){
-					newFontSize = (parseInt(newFontSize) + 1 )+"px"
+					newFontSize = (parseInt(newFontSize) + 1 )+"px";
 				}
 				else{return;}
+				document.getElementById(para).style.fontSize = newFontSize;
 				return newFontSize;
 			}
-
+			console.log(increaseFontSize("text3"));
 		// //Bài 3:
 		
 			function decreaseFontSize(para){
 				var newFontSize1 = document.getElementById(para).style.fontSize;
 				if(parseInt(newFontSize1)<=29){
-					newFontSize1 = (parseInt(newFontSize1) + 1 )+"px"
+					newFontSize1 = (parseInt(newFontSize1) - 1 )+"px"
 				}
 				else{return;}
+				document.getElementById(para).style.fontSize = newFontSize1;
 				return newFontSize1;
 			}
 
