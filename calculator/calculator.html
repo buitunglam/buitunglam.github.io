@@ -84,10 +84,12 @@
 		 }
 
 		/*Jquery de thay doi background cho may tinh*/
-
+		 
 		 $(document).ready(function(){
-		 	$("#changeTheme").click(function(){
-		 		$(".container").css("background-color","teal");
+		 	$("#changeTheme").click(function(i){
+		 	   var color = ["teal","black","red","orange","light-blue"];
+		 	   var random = Math.floor(Math.random()*color.length);
+		 	$(".container").css('background-color',color[random]);
 		 	});
 		 });
 	</script>
