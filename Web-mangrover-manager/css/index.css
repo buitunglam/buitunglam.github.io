@@ -100,7 +100,7 @@ body{
 }
 .images-content h2{
 	margin-bottom: 42px;
-    margin-left: 90px;
+    text-align: center;
     font-size: 30px;
 }
 .images-content-item{
@@ -119,6 +119,33 @@ body{
 	height: 225px;
 }
 /*End images*/
+
+/* Map images */
+
+.map-images{
+	margin-top: 50px;
+	width: 100%;
+	height: auto;
+}
+.map-images-content{
+	width: 100%;
+	margin: auto;
+	height: 965px;
+}
+.map-images-content h2{
+	margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.map-images-item{
+    float: left;
+}
+.map-images-item img{
+	width: 295px;
+    height: 300px;
+    padding-left: 20px;
+}
+/* Map images */
 
 /* Start Foooter css */
 .footer{
