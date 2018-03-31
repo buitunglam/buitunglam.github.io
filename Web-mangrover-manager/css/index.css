@@ -106,6 +106,7 @@ body{
 .images-content-item{
 	padding-bottom: 45px;
     float: left;
+    margin: auto;
 }
 .images-content-item img{
 	width: 300px;
@@ -139,6 +140,7 @@ body{
 }
 .map-images-item{
     float: left;
+    margin: auto;
 }
 .map-images-item img{
 	width: 295px;
