@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.wrap{
+	width: 1140px;
+	margin: auto;
+}
+.content{
+	
+
+}
+.card{
+	float: left;
+	position: relative;
+	height: 290px;
+    padding-left: 285px;
+    margin-top: 53px;
+}
+.front{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transition: all 0.5s;
+}
+.back{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	backface-visibility: hidden;
+	transition: all 0.5s;
+}
+.alibaba {
+	transform:rotateY(180deg);
+}
