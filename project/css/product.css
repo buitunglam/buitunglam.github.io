@@ -5,21 +5,14 @@
 	box-sizing: border-box;
 }
 body{
-	/*background-color:#f0f0f0;*/
 	background-color:white;
 }
 
 .clear{
 	clear:both;
 }
-/*.container{
-	background:white;
-	width: 1366px;
-	margin: auto;
-	/*border: 1px solid red;
-}*
-/*Start header*/
 
+/*Start header*/
 .header{
 	width:100%;
 	background-color: #2c3640;
@@ -557,7 +550,6 @@ body{
 }
 /*Start cart popup*/
  
-
 
 
 
