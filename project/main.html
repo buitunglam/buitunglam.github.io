@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="header"><!--Start header-->
+		<div class="header-content">
+			<div class="header-intro">
+				<div class="header-hotline">
+					<i class="fa fa-phone"></i>
+					<p>0904145278</p>
+				</div>
+				<div class="header-logo">
+					<a href="main.html"><p>ACE STORE</p></a>
+				</div>
+				<div class="header-search">
+					<input type="text" placeholder="search">
+				</div>
+				<div class="header-user">
+					<a href="login.html"><i class="fa fa-user"></i></a>
+				</div>
+				<div class="header-cart">
+					<a href="cart.html">
+						<i class="fa fa-shopping-cart"></i>
+						<span id="count-item" data-count="0">0 item</span>
+					</a>
+					
+				</div>
+			</div>
+			
+			
+		</div>
+	</div><!--End header-->
+
+
+	<div class="menu">
+		<div class="menu-content">
+			<ul>
+				<li><a href="main.html">HOME</a></li>
+				<li><a href="product-men.html">MEN</a>
+					<ul>
+						<li><a href="#">TRAINNING</a></li>
+						<li><a href="#">RUNNING</a></li>
+						<li><a href="#">FOOTBALL</a></li>
+					</ul>
+				</li>
+				<li><a href="product-women.html">WOMEN</a>
+					<ul>
+						<li><a href="#">TRAINNING</a></li>
+						<li><a href="#">RUNNING</a></li>
+						<li><a href="#">FASHION</a></li>
+					</ul>
+				</li>
+				<li><a href="about-us.html">ABOUT US</a></li>
+				<li><a href="#footer">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+			
+	<div class="clear"></div>
+
+	<div class="slider"><!--Start slider-->
+		<div class="slide-content">
+			<div class="mySlide">
+				<img src="images/banner2.jpg">
+			</div>
+			<div class="mySlide">
+				<img src="images/banner1.jpg">
+			</div>
+			<div class="mySlide">
+				<img src="images/banner4.jpg">
+			</div>
+			<div class="next" onclick="plusSlide(-1)"><i class="fa fa-chevron-left"></i></div>
+			<div class="prev" onclick="plusSlide(1)"><i class="fa fa-chevron-right"></i></div>
+
+			<div class="myDot" style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+		</div>		
+	</div><!--End Slide-->
+
+<!-- 	<div class="container"> -->
+		
+		<div class="brand"><!--Start brand-->
+			<div class="brand-content">
+				<h2>THƯƠNG HIỆU NỔI BẬT</h2>
+				<div class="brand-item">
+					<div class="brand-item-content">
+						<img src="images/brand/yeezy.jpg">
+					</div>
+					<p>Yeezy</p>
+				</div>
+				<div class="brand-item">
+					<div class="brand-item-content">
+						<img src="images/brand/taylor70.jpg">
+					</div>
+					<p>Converse</p>
+				</div>
+				<div class="brand-item">
+					<div class="brand-item-content">
+						<img src="images/brand/NMD.jpg">
+					</div>
+					<p>Adidas</p>
+				</div>
+				<div class="brand-item">
+					<div class="brand-item-content">
+						<img src="images/brand/vapor.jpg">
+					</div>
+					<p>Nike</p>
+				</div>
+			</div>
+		</div><!--End brand-->
+		<div class="clear"></div>
+		<div class="advertisement"><!--Start Advertisement-->
+			<div class="advertisement-content">
+				<div class="advertisement-text">
+					<p>FEEL GOOD RUNNING</p>
+					<a href="product-men.html"><input type="button" value="Shop's Men"/></a>
+					<a href="product-women.html"><input type="button" value="Shop's Women"/></a>
+				</div>
+			</div>
+		</div><!--End Advertisement-->
+
+		<div class="wrap">
+			<div class="sale"><!--start sale-->
+				<div class="sale-content">
+					<h3>HOT SALE</h3>
+					<div class="sale-content-item product-item">
+						<img src="images/sale1.jpg" class="product-images">
+						<p class="product-title">ULTRA BOOST 4.0 "TRIPLE BLACK"</p>
+						<p class="sale-price">
+							<span><del>$250</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale2.jpg" class="product-images">
+						<p class="product-title">NMD R1 PK "JAPAN BOOST"</p>
+						<p class="sale-price">
+							<span><del>$210</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale3.jpg" class="product-images">
+						<p class="product-title">YEEZY BOOST 350 V2 "BELUGA"</p>
+						<p class="sale-price">
+							<span><del>$855</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale4.jpg" class="product-images">
+						<p class="product-title">CONVERSE-COMME DES GARCONS</p>
+						<p class="sale-price">
+							<span><del>$185</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale5.jpg" class="product-images">
+						<p class="product-title">CONVERSE-CT 70 HI</p>
+						<p class="sale-price">
+							<span><del>$68</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale6.jpg" class="product-images">
+						<p class="product-title">AIR PRESTO ESSENTIAL</p>
+						<p class="sale-price">
+							<span><del>$175</del></span>
+							<span>$200</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale7.jpg" class="product-images">
+						<p class="product-title">NIKE AIR PRESTO ESSENTIAL</p>
+						<p class="sale-price">
+							<span><del>$175</del></span>
+							<span>$120</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="sale-content-item product-item">
+						<img src="images/sale8.jpg" class="product-images">
+						<p class="product-title">WMNS NIKE AIR VAPORMAX FK MOC</p>
+						<p class="sale-price">
+							<span><del>$299</del></span>
+							<span>$375</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="sale-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+
+					<a href="product-women.html"><input type="button" value="SHOW MORE" id="input-more"></a>
+				</div>
+			</div><!--End sale-->
+		</div>
+		
+
+
+		<div class="clear"></div>
+		
+		<div class="sport-adv"><!--Start sport-adv-->
+			<div class="sport-adv-content">
+				<!-- <img src="images/adv.jpg"> -->
+				<div class="sport-adv-text">
+					<p>CONTROL</p>
+					<p> EVERYTHING</p>
+					<p>PEDECTOR-ACE 18</p>
+					<a href="product-men.html"><input type="button" value="SHOP NOW"/></a>
+				</div>
+			</div>
+		</div><!--End sport-adv-->	
+
+
+
+		<div class="wrap">
+			<div class="new-product"> <!-- stat new product -->
+				<div class="new-product-content">
+					<h3>SẢN PHẨM MỚI</h3>
+					<div class="new-product-item product-item">
+						<img src="images/new-product1.jpg" class="product-images">
+						<p class="product-title">THE 10: AIR VAPORMAX FK "OFF-WHITE"</p>
+						<p class="new-product-price">
+							<span>$670</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+
+					<div class="new-product-item product-item">
+						<img src="images/new-product2.jpg" class="product-images">
+						<p class="product-title">AIR HUARACHE "TRIPLE BLACK"</p>
+						<p class="new-product-price">
+							<span>$100</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+
+					<div class="new-product-item product-item">
+						<img src="images/new-product3.jpg" class="product-images">
+						<p class="product-title">DUNK HIGH PREMIUM SB "NORTHERN LIGHTS"</p>
+						<p class="new-product-price">
+							<span>$300</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="new-product-item product-item">
+						<img src="images/new-product4.jpg" class="product-images">
+						<p class="product-title">NMD CS1 PK "GORE-TEX"</p>
+						<p class="new-product-price">
+							<span>$170</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="new-product-item product-item">
+						<img src="images/new-product5.jpg" class="product-images">
+						<p class="product-title">NMD XR1 PK</p>
+						<p class="new-product-price">
+							<span>$225</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="new-product-item product-item">
+						<img src="images/new-product6.jpg" class="product-images">
+						<p class="product-title">YEEZY BOOST 750</p>
+						<p class="new-product-price">
+							<span>$1,500</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="new-product-item product-item">
+						<img src="images/new-product7.jpg" class="product-images">
+						<p class="product-title">AIR FOOTSCAPE MAGISTA FLYKNIT</p>
+						<p class="new-product-price">
+							<span>$90</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+					<div class="new-product-item product-item">
+						<img src="images/new-product8.jpg" class="product-images">
+						<p class="product-title">AIR HUARACHE</p>
+						<p class="new-product-price">
+							<span>$125</span>
+						</p>
+						<input type="button" value="QUICK VIEW" class="quick_view">
+						<div class="new-product-icon product-cart"><i class="fa fa-cart-plus"></i></div>
+					</div>
+
+					<a href="product-men.html"><input type="button" value="SHOW MORE" id="input-more"></a>
+				</div>
+			</div><!--  End new product -->
+		</div>
+	
+		<div class="Our-store"><!-- start our store -->
+			<div class="Our-store-title"><h3>HỆ THỐNG CỬA HÀNG</h3></div>
+			<div class="Our-store-content">
+				<div class="Our-store-item">
+					<div class="Our-store-text">
+						<span>HÀ NỘI</span>
+						<i class="fa fa-map-marker"></i>
+					</div>
+					<div class="Our-store-img" >
+						<a href="about-us.html"><img src="images/store1.jpg"></a>
+					</div>
+				</div>
+				
+				<div class="Our-store-item" id="store-img2">
+					<div class="Our-store-text">
+						<span> TP HỒ CHÍ MINH</span>
+						<i class="fa fa-map-marker"></i>
+					</div>
+					<div class="Our-store-img">
+						<a href="about-us.html"><img src="images/store2.jpg"></a>
+					</div>
+				</div>
+			</div>
+		</div><!-- start our store -->
+		<div class="clear"></div>
+
+
+		<div class="up-top"><!-- up to top -->
+			<a href="#"><i class="fa fa-arrow-up"></i></i></a>
+		</div><!-- up to top -->
+		
+
+		<div class="sale-popup"><!--  start popup -->
+		</div>
+		<div class="sale-popup-content">
+			<p class="popup-title">ULTRA BOOST 4.0 "TRIPLE BLACK"</p>
+			<img src="images/sale1.jpg" class="popup-img">
+			<span>Thiết kế nén khí làm chân tiếp đất “êm” hơn, giúp giảm bớt đi lực tác động giúp bạn được bảo vệ tránh dẫn đến các chấn thương từ cường độ hoạt động cao. 
+				Phần trên của giày luôn ôm sát vào chân bạn , giữ chân không bị xộc xệch, chống sốc và cân bằng, cải thiện khả năng chống sốc và bảo vệ cho giày.
+			Thích hợp cho nhiều độ tuổi, mẫu mã đa dạng phong phú phù hợp với mọi hoàn cảnh và hoạt động.</span>
+			<div class="button-buy"><p>MUA NGAY</p></div>
+		</div><!-- End popup -->
+
+		<div class="cart-popup"><!--  start popup -->
+		</div>
+		<div class="cart-popup-content">
+			<div class="cart-popup-title">
+				<i class="fa fa-check-circle-o"></i>
+				<span>Đã thêm vào rỏ hàng</span>
+				<span class="cart-amount">Số lượng : 1 đôi</span>
+			</div>
+			<div class="cart-popup-images">
+				<img src="images/sale1.jpg" class="cart-popup-avatar">
+			</div>
+			<div class="cart-popup-detail">
+				<p class="cart-name-shoes">ULTRA BOOST 4.0 "TRIPLE BLACK"</p>
+				
+			</div>
+			<div class="cart-view">
+				<a href="cart.html"><span>Xem giỏ hàng</span></a>
+			</div>
+		</div><!-- End popup -->
+
+
+<!-- 	</div>End Content -->
+
+	<div class="footer" id="footer">
+			<div class="footer-content">
+				<div class="footer-item">
+					<h3>LIÊN HỆ</h3>
+					<p>Ngõ 14- Nguyễn Đình Chiểu - Quận Hai Bà Trưng - Hà Nội</p>
+					<p>Số điện thoại: 0904145278</p>
+					<p>Email: Acestore@gmail.com</p>
+				</div>
+				<div class="footer-item">
+					<h3>CHÍNH SÁCH HỖ TRỢ</h3>
+					<p>Hướng dẫn đặt hàng và thanh toán</p>
+					<p>Chính sách đổi trả</p>
+					<p>Chính sách vận chuyển</p>
+				</div>
+				<div class="footer-item" id="footer-link">
+					<h3>LIÊN KẾT</h3>
+					<p>Hãy kết nối với chúng tôi</p>
+					<p class="footer-icon"><i class="fa fa-facebook-square"></i></p>
+					<p class="footer-icon"><i class="fa fa-instagram"></i></p>
+					<p class="footer-icon"><i class="fa fa-google-plus-square"></i></p>
+					<p class="footer-icon"><i class="fa fa-youtube-play"></i></p>
+					<img src="images/dk.png">
+				</div>
+					
+				<div class="footer-item">
+					<h3>FANFAGE</h3>
+					<div id="fb-root">
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=342px&height=230px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="342px" height="230px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					</div>
+
+				</div>
+			</div>			
+		</div><!--End footer-->
+		
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
