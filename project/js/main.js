@@ -146,7 +146,7 @@ function autoSlide(){
 	slides[slideIndex - 1].style.display = "block";
 	dots[slideIndex -1].className += " active";
 
-	// setTimeout(autoSlide,3000);
+	setTimeout(autoSlide,3000);
 }
 
 autoSlide(slideIndex);
