@@ -105,15 +105,17 @@ document.addEventListener('DOMContentLoaded',function(){
 document.addEventListener('DOMContentLoaded',function(){
 	var circle = document.querySelectorAll(".thumb_nail ul li");
 	var slide = document.querySelectorAll('.slider ul li');
+	var time = setInterval(function(){ autoSlide() },5000);
 	//console.log(slide);
 
 	//Viet hieu ung active cho nut tron
 	for (var i = 0; i < circle.length; i++) {
 		circle[i].onclick = function(){
+			clearInterval(time);
+
 			for (var i = 0; i < circle.length; i++) {
 				circle[i].classList.remove('active');
 			}
-			console.log(i); 
 			this.classList.add('active');
 			
 			var button_active = this;
@@ -129,6 +131,35 @@ document.addEventListener('DOMContentLoaded',function(){
 		}
 	}
 
+	//Viết hiệu ứng auto slide
+
+	function autoSlide(){
+		
+			//Tính vị trí của slide hiện tại
+			 var slide_now = document.querySelector('.slider ul li.slide-active');
+			 console.log(slide_now.previousElementSibling);
+			 var slide_position = 0;
+			for (slide_position = 0; slide_now = slide_now.previousElementSibling; slide_position++) {
+				
+			}
+			if(slide_position < slide.length -1){
+				for (var i = 0; i < slide.length; i++) {
+					slide[i].classList.remove('slide-active');
+					circle[i].classList.remove('active');
+				}
+				slide[slide_position].nextElementSibling.classList.add('slide-active');
+				circle[slide_position].nextElementSibling.classList.add('active');
+			}
+			else{
+				for (var i = 0; i < slide.length; i++) {
+					slide[i].classList.remove('slide-active');
+					circle[i].classList.remove('active');
+				}
+				slide[0].classList.add('slide-active');
+				circle[0].classList.add('active');
+			}
+			console.log(slide_position);
+	} 
 })
 
 
