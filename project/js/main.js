@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	var sport = document.querySelector('.sport-adv-text');
 	var menu = document.querySelector('.menu');
 	var menu_cart = document.querySelector('.header-cart');
-
+	//console.log(window.pageYOffset)
 	//hiệu ứng cho phần lên top
 	window.addEventListener('scroll',function(){
 		if(window.pageYOffset > 600){
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 		//hiệu ứng cho phần load nội dung sport
 		
-		if(window.pageYOffset > 2750){
+		if(window.pageYOffset > 2405){
 			// console.log("clgt");
 			if(status2 == "duoi2"){
 				status2 = 'tren2'
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		}	
 
 		// Viết hiệu ứng cho phần load menu
-		if(window.pageYOffset > 180){
+		if(window.pageYOffset > 380){
 			if(status_menu == 'duoi3'){
 				status_menu = 'tren3'
 				menu.classList.add('show_menu');
@@ -101,55 +101,35 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-// function for Slider
-var slideIndex = 1;
-function slideShow(n){
-	var slides = document.getElementsByClassName("mySlide");
-	var dots = document.getElementsByClassName("dot");
+// hiệu ứng cho Slider
+document.addEventListener('DOMContentLoaded',function(){
+	var circle = document.querySelectorAll(".thumb_nail ul li");
+	var slide = document.querySelectorAll('.slider ul li');
+	//console.log(slide);
 
-	if(n > slides.length){slideIndex = 1};
-	if(n < 1){slideIndex = slides.length};
-	for(i=0; i<slides.length; i++){
-		slides[i].style.display = "none";
+	//Viet hieu ung active cho nut tron
+	for (var i = 0; i < circle.length; i++) {
+		circle[i].onclick = function(){
+			for (var i = 0; i < circle.length; i++) {
+				circle[i].classList.remove('active');
+			}
+			console.log(i); 
+			this.classList.add('active');
+			
+			var button_active = this;
+		
+			for (var vt = 0; button_active = button_active.previousElementSibling ; vt++) {
+			
+			}
+			for (var i = 0; i < slide.length; i++) {
+				slide[i].classList.remove('slide-active');
+				slide[vt].classList.add('slide-active');
+			}
+			
+		}
 	}
-	for(i=0; i<dots.length; i++){
-		dots[i].className =  dots[i].className.replace(" active","");
-	}
-	slides[slideIndex - 1].style.display = "block";
-	dots[slideIndex -1].className += " active";
-}
 
-slideShow(slideIndex);
-function plusSlide(n){
-	slideShow(slideIndex += n);
-}
-function currentSlide(n){
-	slideShow(slideIndex = n);
-}
-
-//function slide tự động chạy
-
-function autoSlide(){
-	var slides = document.getElementsByClassName("mySlide");
-	var dots = document.getElementsByClassName("dot");
-
-	
-	if(slideIndex < 1){slideIndex = slides.length};
-	for(i=0; i<slides.length; i++){
-		slides[i].style.display = "none";
-	}
-	for(i=0; i<dots.length; i++){
-		dots[i].className =  dots[i].className.replace(" active","");
-	}
-	slideIndex++
-	if(slideIndex > slides.length){slideIndex = 1};
-	slides[slideIndex - 1].style.display = "block";
-	dots[slideIndex -1].className += " active";
-
-	setTimeout(autoSlide,3000);
-}
-
-autoSlide(slideIndex);
+})
 
 
 

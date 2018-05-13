@@ -176,66 +176,127 @@ body,html{
    /*End Menu*/
 /*Start header*/
 
+
+
 /*Start Slider*/
+
+.slide-wraper{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.thumb_nail {
+    text-align: center;
+    position:absolute;
+    top: 85%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.thumb_nail ul {
+    display: inline;
+}
+
+.thumb_nail ul li {
+    display: inline-block;
+    border: 1px solid #a89999;
+    text-indent: -99999px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 20px 7px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.thumb_nail ul li:hover {
+    background-color: #ffffffa6;
+}
+.active{
+	background:#ffffffa6;
+}
+/*start Slider-content*/
+
 .slider{
 	width:100%;
+	height:100%;
 }
-.slide-content{
-	position: relative;
-	width:1366px;
-	margin:auto;
-}
-.mySlide{
+.slider ul {
+	position:relative;
 	width:100%;
+	height:100%;
 }
-.mySlide img{
+.slider ul li{
+	list-style:none;
+	position:absolute;
 	width:100%;
-	height:680px;
+	height:100%;	
+	opacity:0;
+	transition:1s;
 }
-.mySlide .text{
-	font-size:40px;
-	font-weight: bold;
+.slider ul .slide-active{
+	opacity:1;
+}
+.single-slide{
+	position:relative;
+	width:100%;
+	height:100%;
+} 
+.slide_img{
+	width:100%;
+	height:100%;
+	background-size:cover;
+}
+.slide-text{
 	position:absolute;
-	top:70%;
-	left:50%;
+	z-index:1;
+	top: 204px;
+	left: 305px;
+	color:white;
+	opacity:0;
 }
-.prev {
-	font-size:65px;
-	font-weight:bold;
-	position:absolute;
-	top:50%;
-	left: 1322px;
-	color: #888686;
-	cursor: pointer;
+ul li.slide-active .single-slide .slide-text{
+	opacity:1;
+	animation : text_move 1s linear forwards;
 }
-.next {
-	font-size:65px;
-	font-weight:bold;
-	position:absolute;
-	top:50%;
-	left: -4px;
-	color: #888686;
-	cursor: pointer;
+ @keyframes text_move{
+	from {left: -175px;opacity:0;}
+    to {left: 250px;opacity:1;}
+ }
+.slide-text h2{
+	font-size:30px;
+
 }
-.myDot{
-	position: absolute;
-	top: 100%;
-	left: 48%;
+.slide-text small{
+	font-size:20px;
+	line-height: 48px;
 }
-.dot{
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.slide-text a{
+	text-decoration:none;
+
 }
-.active, .dot:hover {
-  background-color: #717171;
+.slide-text .button-shopnow{
+	width:130px;
+	height:50px;
+	line-height:20px;
+	background:gray;
+	cursor:pointer;
+	border-radius:5px;
+	color:white;
 }
-/*End slider*/
+.button-shopnow p{
+	font-size: 20px;
+	text-align:center;
+	line-height: 50px;
+}
+/*End Slider*/
+
+
+
+
+
+
+
 
 /*Start brand*/
 .brand{
