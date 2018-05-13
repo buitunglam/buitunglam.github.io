@@ -261,13 +261,13 @@ ul li.slide-active .single-slide .slide-text{
 }
  @keyframes text_move{
 	from {left: -175px;opacity:0;}
-    to {left: 250px;opacity:1;}
+    to {left: 300px;opacity:1;}
  }
 .slide-text h2{
 	font-size:30px;
 
 }
-.slide-text small{
+.slide-text span{
 	font-size:20px;
 	line-height: 48px;
 }

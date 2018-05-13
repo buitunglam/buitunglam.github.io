@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	var sport = document.querySelector('.sport-adv-text');
 	var menu = document.querySelector('.menu');
 	var menu_cart = document.querySelector('.header-cart');
-	//console.log(window.pageYOffset)
+	
 	//hiệu ứng cho phần lên top
 	window.addEventListener('scroll',function(){
 		if(window.pageYOffset > 600){
