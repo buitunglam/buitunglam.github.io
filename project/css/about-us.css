@@ -13,7 +13,7 @@ body{
 }
 .container{
 	background:white;
-	width: 1366px;
+	width: 1263px;
 	height:auto;
 	margin: auto;
 	/*border: 1px solid red;*/
@@ -24,7 +24,7 @@ body{
 	background-color: #2c3640;
 }
 .header-content{
-	width:1366px;
+	width:1263px;
 	margin:auto;
 	position: relative;
 }
@@ -108,7 +108,7 @@ body{
 .header-cart{
 	float:left;
 	position: absolute;
-	left: 1298px;
+	left: 1196px;
 }
 .header-cart i{
 	font-size: 35px;
@@ -180,17 +180,16 @@ body{
 }
 .about-us-images{
 	float:left;
-	width:600px;
+	width: 500px;
 	height:auto;
 }
 .about-us-images img{
-	width:600px;
-
+	width: 479px;
 }
 .about-us-text{
-    width: 695px;
+    width: 655px;
     float: left;
-    padding-left: 35px;
+    /* padding-left: 35px; */
     font-size: 22px;
     text-align: justify;
 }
@@ -235,14 +234,14 @@ body{
 	color:#473e3efa;
 }
 .Our-store-content img{
-	width: 633px;
+	width: 580px;
 	height: 500px;
 	cursor:pointer;
 }
 .Our-store-img{
-	width: 620px;
+	width: 615px;
 	height: 500px;
-	margin-right: 42px;
+	margin-right: 0px;
 }
 /*End store*/
 
@@ -253,7 +252,7 @@ body{
 	background-color:#1c2632;
 }
 .footer-content{
-	width:1366px;
+	width:1263px;
 	height:315px;
 	margin:auto;
 

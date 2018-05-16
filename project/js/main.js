@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
 document.addEventListener('DOMContentLoaded',function(){
 	var circle = document.querySelectorAll(".thumb_nail ul li");
 	var slide = document.querySelectorAll('.slider ul li');
-	var time = setInterval(function(){ autoSlide() },5000);
+	var time = setInterval(function(){ autoSlide() },4000);
 	//console.log(slide);
 
 	//Viet hieu ung active cho nut tron
