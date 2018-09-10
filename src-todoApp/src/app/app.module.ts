@@ -15,6 +15,7 @@ import { appRouter } from './app.routes';
 // service
 import { ProductService } from './services/product.service';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 
@@ -28,6 +29,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     NotFoundComponent,
     ProductsComponent,
     ProductDetailComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
