@@ -1,0 +1,16 @@
+<div class="alert alert-warning" *ngIf="error === -1">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>Your name or password is wrong!!!</strong>
+</div>
+<form>
+  <legend>Login</legend>
+  <div class="form-group">
+    <label for=""></label>
+    <input type="text" class="form-control" placeholder="Name" #nameInput>
+    <br>
+    <input type="password" class="form-control"  placeholder="Password" #passwordInput>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onLogin(nameInput.value,passwordInput.value)">Submit</button>
+  <p>Name: admin</p>
+  <p>password: admin</p>
+</form>

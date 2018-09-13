@@ -1,0 +1,9 @@
+<div class="home">
+  <h3>This is the home components</h3>
+  <input type="text" class="form-control" #key><br>
+  <p class="key_input" *ngIf="error == -1">Key is not exact</p>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" (click)="onAccess(key.value)">Access</button>
+  </div>
+  <p>Nhập key: 123456</p>
+</div>

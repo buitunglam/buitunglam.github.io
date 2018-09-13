@@ -1,0 +1,16 @@
+<form >
+  <legend>Form Title</legend>
+  <div class="form-group">
+    <label></label>
+    <input type="text" class="form-control" placeholder="Name" [(ngModel)]='product.name' [ngModelOptions]="{standalone: true}"><br>
+    <input type="text" class="form-control" placeholder="Price" [(ngModel)]='product.price' [ngModelOptions]="{standalone: true}">
+  </div>
+  <label>
+    <select class="form-control" [(ngModel)]="product.status" [ngModelOptions]="{standalone: true}">
+      <option value="true">On stock</option>
+      <option value="false">Sold out</option>
+    </select>
+  </label>
+  <br>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

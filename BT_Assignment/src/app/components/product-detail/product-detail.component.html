@@ -1,0 +1,13 @@
+<ng-container *ngIf="product; else noProduct ">
+  <h2>ID: {{product.id}}</h2>
+  <h3>Name: {{product.name}}</h3>
+  <h3>Price: {{product.price}}</h3>
+  <h3>Status: {{product.status ? 'Active': 'Deactive'}}</h3>
+  <a [routerLink] = "['/products']">Get back</a>
+</ng-container>
+<hr>
+<button class="btn btn-success" (click)="onEdit()">edit</button>
+<button class="btn btn-danger" (click)="onDelete()">Delete</button>
+<ng-template #noProduct>
+    <h1>This product has been deleted</h1>
+</ng-template>
