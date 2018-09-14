@@ -1,0 +1,19 @@
+<div class="alert alert-warning" *ngIf="err == -1">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>Bạn cần nhập đúng name và password</strong>
+</div>
+
+<form>
+  <legend>Login</legend>
+  <div class="form-group">
+    <label for="">User name</label>
+    <input type="text" class="form-control" #userName>
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" #userPassword>
+  </div>
+  <span>Vui lòng login với user: admin - password: admin.</span><br><br>
+  <button type="button" class="btn btn-primary" (click)="onLogin(userName.value,userPassword.value)">Login</button>
+</form>

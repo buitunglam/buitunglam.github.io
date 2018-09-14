@@ -1,0 +1,64 @@
+<form action="" method="post" role="form" [formGroup]="formUser" (ngSubmit)="onSubmitForm()">
+  <legend>Add course</legend>
+  <div class="form-group">
+    <label for="">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtName"
+      formControlName="userName"
+      [(ngModel)]="course.name">
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.required"
+    >Bạn cần nhập vào dữ liệu</span>
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.minlength"
+    >Bạn cần nhập vào đủ số ký tự</span>
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.maxlength"
+    >Bạn cần nhập đã nhập quá số ký tự</span>
+  </div>
+  <div class="form-group">
+    <label for="">Price</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtPrice"
+      formControlName="userPrice"
+      [(ngModel)]="course.price" >
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userPrice'].dirty && formUser.controls['userPrice'].errors?.required"
+    >Bạn cần nhập vào dữ liệu</span>
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userPrice'].dirty && formUser.controls['userPrice'].errors?.minlength"
+    >Bạn cần nhập vào đúng số lượng ký tự</span>
+  </div>
+  <div class="form-group">
+    <label for="">Description</label>
+    <textarea
+      class="form-control"
+      row="3"
+      name="txtDescription"
+      formControlName="userDescription"
+      [(ngModel)]="course.description" ></textarea>
+    <span
+      style="color: red"
+      *ngIf="formUser.controls['userDescription'].dirty && formUser.controls['userDescription'].errors?.required"
+    >Bạn cần nhập vào dữ liệu</span>
+  </div>
+  <select class="form-control" [(ngModel)]="course.status" >
+    <option value="true">On stock</option>
+    <option value="false">Sold out</option>
+  </select>
+
+
+  <button [disabled]="formUser.invalid" type="submit" class="btn btn-primary" style="margin-top: 15px" (click)="onAddCourse()" >Add</button>
+  <button type="submit" class="btn btn-primary" style="margin-top: 15px" (click)="onResetForm()">Reset</button>
+</form>
+<!---->
+<!---->

@@ -1,0 +1,17 @@
+<form action="" method="post" role="form">
+  <legend>Edit course</legend>
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="course.name" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label for="">Price</label>
+    <input type="text" class="form-control" [(ngModel)]="course.price" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label for="">Description</label>
+    <textarea class="form-control" row="3" [(ngModel)]="course.description" [ngModelOptions]="{standalone: true}"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" style="margin-top: 30px;" (click)="onEdit()">Save</button>
+</form>
