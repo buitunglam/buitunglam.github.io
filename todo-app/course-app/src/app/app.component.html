@@ -3,49 +3,12 @@
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions] ="{exact: true}" >
-        <a class="nav-link" [routerLink]="['/']" translate >Login</a>
-      </li>
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" [routerLink]="['/home']" translate >Home</a>
-      </li>
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" [routerLink]="['/about']" translate>About</a>
-      </li>
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" [routerLink]="['/contact']" translate>Contact</a>
-      </li>
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions] ="{exact: true}">
-        <a class="nav-link" [routerLink]="['/courses']" translate>Courses</a>
-      </li>
-      <li class="nav-item"
-          routerLinkActive="active"
-          [routerLinkActiveOptions] ="{exact: true}">
-        <a class="nav-link" [routerLink]="['/']" (click)="onLogOut()" translate>Logout</a>
-      </li>
-      <!-- Example single danger button -->
-      <div class="btn-group">
-        <button type="button" class="btn btn-info dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false" translate>
-          Lang
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" (click)="switchLanguage('en')">EN</a>
-          <a class="dropdown-item" (click)="switchLanguage('vi')">VI</a>
-        </div>
-      </div>
+      <li class="nav-item"  routerLinkActive="active" [routerLinkActiveOptions] ="{exact: true}"><a class="nav-link" [routerLink]="['/']">Login</a></li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a class="nav-link" [routerLink]="['/home']">Home</a></li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a class="nav-link" [routerLink]="['/about']">About</a></li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions] ="{exact: true}"><a class="nav-link" [routerLink]="['/courses']">Courses</a></li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions] ="{exact: true}"><a class="nav-link" [routerLink]="['/']" (click)="onLogOut()">Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -68,5 +31,11 @@
   </div>
 
 </div>
+<h1 translate>Title</h1>
 
+<div>
+  {{ 'Intro' | translate:user }}
+</div>
+<button (click)="switchLanguage('en')">en</button>
 
+<button (click)="switchLanguage('vi')">vi</button>

@@ -4,7 +4,7 @@ import { Subscription } from "rxjs";
 import { CourseService } from "../../service/course.service";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validator, FormControl, Validators} from "@angular/forms";
 import {validate} from "codelyzer/walkerFactory/walkerFn";
 
 @Component({

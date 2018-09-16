@@ -11,17 +11,17 @@ export class CourseService {
   constructor(
    public http:HttpClient
   ) {}
-  // Get data form serve
+
   getAllCourses(): Observable<Course[]> {
     return this.http.get<Course[]>(this.API);
   }
-  // Add new course
   addNewCourse(course: Course): Observable<Course> {
-    return this.http.post<Course>(this.API,course);
+    // @ts-ignored
+    return this.http.post(this.API,course);
   }
-  // Delete course
   removeItem(id:number): Observable<Course> {
-      return this.http.delete<Course>(`${this.API}/${id}`);
+    // @ts-ignored
+      return this.http.delete(`${this.API}/${id}`);
   }
   // load one data
   getCourse(id:number): Observable<Course> {
