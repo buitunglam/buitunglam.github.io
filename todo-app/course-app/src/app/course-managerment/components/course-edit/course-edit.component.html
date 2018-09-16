@@ -1,16 +1,55 @@
-<form action="" method="post" role="form">
+<form action="" method="post" role="form" [formGroup]="formUser" (ngSubmit)="formValidate()">
   <legend>Edit course</legend>
   <div class="form-group">
     <label for="">Name</label>
-    <input type="text" class="form-control" [(ngModel)]="course.name" [ngModelOptions]="{standalone: true}">
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="course.name"
+           formControlName="userName"
+           >
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.required">
+      Bạn cần nhập vào tên
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.minlength">
+      Bạn cần nhập vào đủ ký tự (ít nhất 5 ký tự)
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.maxlength">
+      Bạn đã nhập quá ký tự (nhiều nhất 30 ký tự)
+    </div>
   </div>
   <div class="form-group">
     <label for="">Price</label>
-    <input type="text" class="form-control" [(ngModel)]="course.price" [ngModelOptions]="{standalone: true}">
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="course.price"
+           formControlName="userPrice"
+    >
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userPrice'].dirty && formUser.controls['userPrice'].errors?.required">
+      Bạn cần nhập vào giá của khóa học
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userPrice'].dirty && formUser.controls['userPrice'].errors?.pattern">
+      Bạn đã nhập vào đúng giá
+    </div>
   </div>
   <div class="form-group">
     <label for="">Description</label>
-    <textarea class="form-control" row="3" [(ngModel)]="course.description" [ngModelOptions]="{standalone: true}"></textarea>
+    <textarea class="form-control" row="3"
+              [(ngModel)]="course.description"
+              formControlName="userDescription"
+    ></textarea>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userDescription'].dirty && formUser.controls['userDescription'].errors?.required">
+      Bạn cần nhập vào miêu tả
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formUser.controls['userDescription'].dirty && formUser.controls['userDescription'].errors?.minlength">
+      Bạn cần nhập vào đủ ký tự (ít nhất 5 ký tự)
+    </div>
   </div>
 
   <button type="submit" class="btn btn-primary" style="margin-top: 30px;" (click)="onEdit()">Save</button>

@@ -3,6 +3,7 @@ import { Course } from "../../models/course.model";
 import { Router,ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
 import { CourseService } from "../../service/course.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-course-edit',
@@ -13,15 +14,39 @@ export class CourseEditComponent implements OnInit,OnDestroy, DoCheck {
   public course: Course = new Course();
   public subscription: Subscription;
   public subscriptionParams: Subscription;
+  public formUser: FormGroup;
   constructor(
     public courseService: CourseService,
     public routerService: Router,
-    public activateService: ActivatedRoute
+    public activateService: ActivatedRoute,
+    public formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
     this.loadData();
+    this.formValidate();
   }
+
+  // Validate form
+
+  formValidate() {
+    this.formUser = this.formBuilder.group({
+      userName : ['',[
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(50)
+      ]],
+      userPrice: ['',[
+        Validators.required,
+        Validators.pattern('^[0-9]+$')
+      ]],
+      userDescription: ['',[
+        Validators.required,
+        Validators.minLength(5)
+      ]]
+    });
+  }
+
 
   loadData() {
       this.subscriptionParams = this.activateService.params.subscribe(data => {
@@ -34,10 +59,8 @@ export class CourseEditComponent implements OnInit,OnDestroy, DoCheck {
       );
   }
 
-  onEdit(){
-    console.log(this.course);
+  onEdit() {
      this.subscription = this.courseService.updateCourse(this.course).subscribe((data: Course)=> {
-        console.log(data);
         this.routerService.navigateByUrl('/courses');
      },error => {
         console.log(error);

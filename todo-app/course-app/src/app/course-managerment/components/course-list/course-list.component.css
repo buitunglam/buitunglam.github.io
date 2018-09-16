@@ -1,0 +1,8 @@
+thead th {
+  vertical-align: middle;
+}
+th p {
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+}

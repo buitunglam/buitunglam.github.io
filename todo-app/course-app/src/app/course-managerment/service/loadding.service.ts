@@ -33,7 +33,7 @@ export class loaddingService implements HttpInterceptor {
           if (this.count === 0) {
             this.spinnerService.hide()
           }
-          console.log('Đây là lỗi ' + error)
+          console.log('Đây là lỗi: ' + error)
         }
       ),
     )

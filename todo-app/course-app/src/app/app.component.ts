@@ -8,11 +8,6 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'course-app';
-  user = {
-    name: 'Arthur',
-    age: 42
-  };
   constructor(
     public routerService: Router,
     private translate: TranslateService,
