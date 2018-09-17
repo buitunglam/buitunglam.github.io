@@ -12,13 +12,23 @@ import { CourseService } from "./service/course.service";
 // course routes
 import { CourseRoutes } from "./course-management.routes";
 import { DateConvertPipe } from './pipes/date-convert.pipe';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {HttpClient} from "@angular/common/http";
+import {HttpLoaderFactory} from "../app.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(CourseRoutes)
+    RouterModule.forChild(CourseRoutes),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [
     CourseListComponent,

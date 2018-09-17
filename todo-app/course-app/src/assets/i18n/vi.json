@@ -1,4 +1,20 @@
 {
   "Title": "Ví dụ về dịch",
-  "Intro": "Xin chào tôi là Lâm, tôi 24 tuổi"
+  "Intro": "Xin chào tôi là Lâm, tôi 24 tuổi",
+  "Login": "Ðang nhập",
+  "Home": "Trang chủ",
+  "About": "Về chúng tôi",
+  "Contact": "Liên hệ",
+  "Courses": "Khóa học",
+  "Logout": "Ðang xuất",
+  "COURSE MANAGEMENT": "QUẢN LÝ KHÓA HỌC",
+  "Add course": "Thêm khóa học",
+  "Name": "Tên",
+  "Price": "Giá",
+  "Description":"Miêu tả",
+  "Create time": "Thời gian tạo khóa học",
+  "Status": "Trạng thái",
+  "Setting": "Cài đặt",
+  "Edit": "Chỉnh sửa",
+  "Delete": "Xóa"
 }
