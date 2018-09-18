@@ -7,7 +7,9 @@
       class="form-control"
       name="txtName"
       formControlName="userName"
-      [(ngModel)]="course.name">
+      [(ngModel)]="course.name"
+      appStringValidateForm
+    >
     <span
       style="color: red"
       *ngIf="formUser.controls['userName'].dirty && formUser.controls['userName'].errors?.required"

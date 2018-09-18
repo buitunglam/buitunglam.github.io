@@ -15,9 +15,11 @@ import { DateConvertPipe } from './pipes/date-convert.pipe';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient} from "@angular/common/http";
 import {HttpLoaderFactory} from "../app.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
