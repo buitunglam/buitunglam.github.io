@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {connect} from 'react-redux';
+import {showMemorized,showAll,showNeedPractice} from '../Redux/actionCreater';
+
 
 class Filter extends Component {
     getTextStyle(statusName){
@@ -17,13 +19,13 @@ class Filter extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity onPress={() => {this.setFilterStatus('FILTER_SHOW_ALL')}}>
+                <TouchableOpacity onPress={() => this.props.showAll()}>
                     <Text style={this.getTextStyle("SHOW_ALL")}>Show all</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {this.setFilterStatus('FILTER_MEMORIZED')}}>
+                <TouchableOpacity onPress={() => this.props.showMemorized()}>
                     <Text style={this.getTextStyle("MEMORIZED")}>Show memorized</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {this.setFilterStatus('FILTER_NEED_PRACTICE')}}>
+                <TouchableOpacity onPress={() => this.props.showNeedPractice()}>
                     <Text style={this.getTextStyle("NEED_PRACTICE")}>Need practice</Text>
                 </TouchableOpacity>
             </View>
@@ -35,7 +37,7 @@ function mapStateToProps(state) {
     return {myFilterStatus: state.filterStatus};
 }
 
-export default connect(mapStateToProps)(Filter);
+export default connect(mapStateToProps,{showMemorized,showAll,showNeedPractice})(Filter);
 
 
 const styles = StyleSheet.create({
@@ -45,7 +47,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
-        color: "white"
     },
     textColor:{
     color: "white"

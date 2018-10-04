@@ -1,25 +1,24 @@
 import React , {Component} from 'react';
-import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {connect} from 'react-redux';
-import Word from "./Word";
-import Filter from './Filter';
+import {toggleIsAdding} from '../Redux/actionCreater';
+
 
 class Header extends Component {
-
     render() {
         return (
                 <View style={styles.header}>
                     <Text/>
                     <Text>MY WORDS</Text>
-                    <TouchableOpacity onPress={() => {this.props.dispatch({ type: 'TOGGLE_ADDING'})}}>
+                    <TouchableOpacity onPress={() => {this.props.toggleIsAdding()}}>
                         <Text style={{width:30, height:30}}>+</Text>
                     </TouchableOpacity>
                 </View>
         );
     }
 }
-
-export default connect()(Header);
+// map to actions
+export default connect(null, {toggleIsAdding})(Header);
 
 const styles = StyleSheet.create({
     header:{

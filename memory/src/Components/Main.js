@@ -23,7 +23,7 @@ class Main extends Component {
                     <FlatList
                         data={this.getMainList()}
                         renderItem={ ( {item}) => <Word myWord={item}/>}
-                        keyExtractor={item => item.id}
+                        keyExtractor={item => item.id.toString()}
                      />
                 </View>
                 <Filter />

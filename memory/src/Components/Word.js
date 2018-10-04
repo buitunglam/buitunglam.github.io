@@ -1,47 +1,33 @@
 import React , {Component} from 'react';
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {connect} from 'react-redux';
+import {memorizedWord,showMeaning} from '../Redux/actionCreater';
+
+
 
 class Word extends Component {
-
-    memorizedWord() {
-        this.props.dispatch({
-            type: "TOGGLE_MEMORIZED",
-            id: this.props.myWord.id
-        });
-    }
-
-    showMeaning() {
-        this.dispatch({
-            type:"TOGGLE_SHOW",
-            id: this.props.myWord.id
-        });
-    }
-
-
     render() {
-        const { en, vn, memorized, isShow} = this.props.myWord;
+        const { en, vn, memorized, isShow,id} = this.props.myWord;
         const textDecorationLine = memorized ? 'line-through' : "none";
         const toggleMemorized = memorized ? 'forgot' : 'memorized';
         // show meaning
-        // const showMeaningWord = isShow ? 'showMeaning' : 'none';
-        const toggleShowMeaning = isShow ? 'hide' : 'show';
+        const showMeaningWord = isShow ? vn : '---';
         return (
             <View style={styles.container}>
                 <Text style={{textDecorationLine}}>{en}</Text>
-                { isShow ? <Text>{vn}</Text> : null}
+                <Text>{showMeaningWord}</Text>
                 <View style={styles.Controller}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={this.memorizedWord.bind(this)}
+                        onPress={() => {this.props.memorizedWord(id)}}
                     >
                         <Text style={styles.textStyle}>{toggleMemorized}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.button}
-                        onpress={this.showMeaning.bind(this)}
+                        onPress={() => this.props.showMeaning(id)}
                     >
-                        <Text style={styles.textStyle}>{toggleShowMeaning}</Text>
+                        <Text style={styles.textStyle}>Show</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -68,11 +54,7 @@ const styles = StyleSheet.create({
     },
     textStyle:{
         textAlign: "center"
-    },
-    showMeaning:{
-        display:"none"
     }
-
 });
 
-export  default connect()(Word);
+export  default connect(null,{memorizedWord,showMeaning})(Word);
