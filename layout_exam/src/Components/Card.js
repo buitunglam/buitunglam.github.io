@@ -8,10 +8,14 @@ export default class CardComponent extends React.Component {
         const images = {
             backgroundImage:{
                 "1":require("../../assets/bg.jpeg"),
-                "2":require("../../assets/bg.jpeg"),
-                "3":require("../../assets/bg.jpeg"),
-                "4":require("../../assets/bg.jpeg"),
-                "5":require("../../assets/bg.jpeg")
+                "2":require("../../assets/bg1.jpg"),
+                "3":require("../../assets/bg2.jpg"),
+                "4":require("../../assets/bg3.jpg"),
+                "5":require("../../assets/bg4.jpg"),
+                "6":require("../../assets/bg6.jpg"),
+                "7":require("../../assets/bg7.jpg"),
+                "8":require("../../assets/bg8.jpg")
+
             },
             // avatar:{
             //     "1":require("../../assets/avt1.jpg"),
@@ -53,7 +57,7 @@ export default class CardComponent extends React.Component {
                 </CardItem>
                 <CardItem>
                     <Body>
-                        <Text>Dường còn xa quá. Haizz bao giờ mới hết nghiệp gánh team đây!!!</Text>
+                        <Text style={{textAlign: "justify"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus ad aliquam esse est eum fugit id molestias nam nisi non numquam obcaecati odio quae recusandae repudiandae, similique soluta vel.</Text>
                     </Body>
                 </CardItem>
             </Card>

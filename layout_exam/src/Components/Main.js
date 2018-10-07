@@ -13,14 +13,15 @@ import SearchTab from "./AppTabNavigator/SearchTab";
 export default class Main extends React.Component {
 
     static navigationOptions = {
-        headerLeft: <Icon
-            name={"ios-camera-outline"}
-            style={{paddingLeft:10}}
-        />,
-        title:"Outstagram",
-        headerRight: <Icon
-            name={"ios-send-outline"}
-            style={{paddingRight:10}} />
+        header:null,
+        // headerLeft: <Icon
+        //     name={"ios-camera-outline"}
+        //     style={{paddingLeft:10}}
+        // />,
+        // title:"Outstagram",
+        // headerRight: <Icon
+        //     name={"ios-send-outline"}
+        //     style={{paddingRight:10}} />
     };
 
     render() {
